@@ -40,7 +40,7 @@ if(!isset($_GET["p"])||$_GET["p"]==""){ // Check if it is set
 		$expire = date("d") +1;
 		$now = date("d");
 		mysql_query("INSERT INTO  `url`.`url` (`id` ,`path` ,`expire` ,`short`)VALUES ('$idrandom',  '$path',  '$expire',  '$short')");	
-		echo "<a href=http://localhost/url/s.php?p=$short><b style=color:blue;>http://localhost/url/s.php?p=$short</b></a><br>";
+		echo "<a target=_blank href=http://localhost/url/s.php?p=$short><b style=color:blue;>http://localhost/url/s.php?p=$short</b></a><br>";
 		mysql_query("DELETE FROM url WHERE expire < $now");
 	}
 	if($short == $rows["short"]||$idrandom == $rows["id"]){

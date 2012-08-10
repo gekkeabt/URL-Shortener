@@ -16,7 +16,11 @@ form {
 	margin:0px auto;
 	padding:20px;
 	-webkit-border-radius:20px;
-	margin-top:250px;;
+	margin-top:250px;
+	text-align:center;
+}
+input {
+	width:350px;
 }
 </style>
 </head>
@@ -54,8 +58,8 @@ if(!isset($_GET["p"])||$_GET["p"]==""){ // Check if it is set
 }
 
 ?>
-The website to generate a short url of ( Don't forget the http:// !)<br>
-<input name="p" type="site" />
+The website to generate a short url of.<br>( Don't forget the http:// )<br>
+<input name="p" type="text" /><br>
 <input type="submit" value="Generate" /><br><br>
 <a href="http://www.abakay.zxq.net">By Ahmed Bakay</a>
 </form>

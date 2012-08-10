@@ -1,0 +1,3 @@
+A Very simple URL shortener with the function to delete expired shortened URL's.
+The Query of the database and the settings for the database connection is included in the c.php file.
+You should change the url http://localhost/url in the index.php file to the directory where your url shortener script files are.

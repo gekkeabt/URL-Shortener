@@ -56,7 +56,8 @@ if(!isset($_GET["p"])||$_GET["p"]==""){ // Check if it is set
 ?>
 The website to generate a short url of<br>
 <input name="p" type="site" />
-<input type="submit" value="Generate" />
+<input type="submit" value="Generate" /><br><br>
+<a href="http://www.abakay.zxq.net">By Ahmed Bakay</a>
 </form>
 </body>
 </html>

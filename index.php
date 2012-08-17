@@ -3,29 +3,34 @@
 <head>
 <meta charset=utf-8 />
 <title>Short URL Generator</title>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
 <style type="text/css">
-body {
-	background:lightblue;
+* {
+	margin:0px;
 	font-family:arial;
-	font-weight:bold;
 }
 form {
-	background-color:gray;
-	-webkit-opacity:0.6;
-	width:400px;
-	margin:0px auto;
-	padding:20px;
-	-webkit-border-radius:20px;
-	margin-top:250px;
 	text-align:center;
+	-webkit-border-radius:0px 0px 20px 20px;
+	background-color:#E6E6E6;
+	width:500px;
+	border-left:2px solid black;
+	border-right:2px solid black;
+	border-bottom:2px solid black;
+	padding:20px;
+	display:none;
 }
 input {
-	width:350px;
+	width:97%;
+}
+#div {
+	display:none;
 }
 </style>
 </head>
 <body>
-<form method="get" action="#">
+<center>
+<form id="form" method="get" action="#">
 <?php 
 require("c.php"); // Require the file to connect to database
 if(!isset($_GET["p"])||$_GET["p"]==""){ // Check if it is set
@@ -58,10 +63,20 @@ if(!isset($_GET["p"])||$_GET["p"]==""){ // Check if it is set
 }
 
 ?>
-The website to generate a short url of.<br>( Don't forget the http:// )<br>
+<hr><br>
+<div id="div">
+The website to generate a short url of.<br>( Don't forget the http:// or https:// )<br><br>
 <input name="p" type="text" /><br>
 <input type="submit" value="Generate" /><br><br>
 <a href="http://www.abakay.zxq.net">By Ahmed Bakay</a>
+</div>
 </form>
+<script type="text/javascript">
+$(document).ready(function(){
+	$("#form").slideDown(1000);
+	$("#div").delay(1000).slideDown(1000);
+});
+</script>
+</center>
 </body>
 </html>

@@ -9,4 +9,3 @@ if( $select = mysql_query("SELECT * FROM url WHERE short = $short") or die(mysql
 	
 //}
 ?>
-f
